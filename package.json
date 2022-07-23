@@ -1,0 +1,17 @@
+{
+  "name": "policies-manager",
+  "version": "0.1.0",
+  "description": "Autorizador baseado em papéis e atributos para aplicações node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "acl",
+    "access",
+    "control",
+    "policy"
+  ],
+  "author": "Gustavo Martins <gustavo_martins92@hotmail.com>",
+  "license": "MIT"
+}
