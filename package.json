@@ -21,6 +21,7 @@
     "@typescript-eslint/parser": "^5.30.7",
     "config-standards": "github:GustMartins/config-standards",
     "eslint": "^8.20.0",
+    "eslint-plugin-filename-rules": "^1.2.0",
     "typescript": "^4.7.4"
   }
 }
