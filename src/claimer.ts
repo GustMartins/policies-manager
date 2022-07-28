@@ -55,7 +55,7 @@ export class Claimer implements IClaimer {
 
   private _checkPolicyStringPatterns(patterns: readonly string[], value: string): boolean {
     return patterns.reduce((memo, pattern) => {
-      if (pattern.indexOf('*') === INDEX_NOT_FOUND) return pattern === value;
+      if (pattern.indexOf('*') === INDEX_NOT_FOUND) return memo || pattern === value;
 
       const regExpString = pattern
         .split(/\*+/)
@@ -66,7 +66,7 @@ export class Claimer implements IClaimer {
         )
         .join('.+');
 
-      return new RegExp(`^${regExpString}$`).test(value);
+      return memo || new RegExp(`^${regExpString}$`).test(value);
     }, false);
   }
 
