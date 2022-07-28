@@ -1,0 +1,12 @@
+{
+  "extends": "config-standards/tsc/tsconfig.browser.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "declaration": true,
+    "outDir": "dist",
+    "noEmitOnError": false
+  },
+  "include": [
+     "src/**/*"
+  ]
+}
