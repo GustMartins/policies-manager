@@ -1,3 +1,22 @@
 {
-  "extends": "./node_modules/config-standards/eslint/index.js"
+  "extends": "./node_modules/config-standards/eslint/index.js",
+  "rules": {
+    "id-length": [ "error", { "min": 3, "exceptions": ["id"] } ]
+  },
+  "overrides": [
+    {
+      "files": "*.ts",
+      "rules": {
+        "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error"]
+      }
+    },
+    {
+      "files": "*.test.ts",
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
 }
