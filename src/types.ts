@@ -11,29 +11,9 @@ export enum Effects {
  * Condições padrão para validação de políticas
  */
 export enum Conditions {
-  Not = 'not',
   Equals = 'equals',
   NotEquals = 'not-equals',
   StartsWith = 'starts-with',
-  Contains = 'contains'
-}
-
-/**
- * Condição do tipo 'contains' necessitam que a(s) propriedade(s) especificadas sejam
- * um array de dados
- */
-export interface ContainsCondition {
-  condition: Conditions.Contains,
-  context: Record<string, any[]>
-}
-
-/**
- * Condições, com exceção do tipo 'contains', podem ter qualquer tipo de valor em suas
- * propriedades
- */
-export interface OtherCondition {
-  condition: Exclude<Conditions, Conditions.Contains>,
-  context: Record<string, any>
 }
 
 /**
@@ -47,7 +27,10 @@ export interface OtherCondition {
  * Se múltiplas condições forem fornecidas em uma mesma regra, todas devem ser válidas
  * ("e"). No momento não há um tipo de agrupamento com "ou".
  */
-export type Condition = ContainsCondition | OtherCondition
+export type Condition = {
+  condition: Conditions,
+  context: Record<string, any>
+}
 
 /**
  * Políticas definem as ações que um sujeito pode exercer em um determinado recurso
