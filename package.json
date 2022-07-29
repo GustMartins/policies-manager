@@ -4,6 +4,9 @@
   "description": "Autorizador baseado em papéis e atributos para aplicações node.js",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
     "standards": "npx eslint ./src --ext .js --ext .ts && npx commitlint --from=7a56da3",
