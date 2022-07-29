@@ -1,9 +1,12 @@
 {
   "name": "policies-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Autorizador baseado em papéis e atributos para aplicações node.js",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
     "standards": "npx eslint ./src --ext .js --ext .ts && npx commitlint --from=7a56da3",
@@ -24,7 +27,7 @@
     "@types/jsonpath": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
-    "config-standards": "github:GustMartins/config-standards",
+    "config-standards": "github:GustMartins/config-standards#semver:^1.0.0",
     "eslint": "^8.20.0",
     "eslint-plugin-filename-rules": "^1.2.0",
     "jest": "^28.1.3",
